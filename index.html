@@ -1,0 +1,54 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Amigo Secreto • Versión playa</title>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Tu lógica existente -->
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <!-- Capa para asegurar legibilidad sobre el fondo -->
+  <div class="bg-overlay"></div>
+
+  <main class="container">
+    <header class="hero">
+      <h1>Amigo Secreto</h1>
+      <p class="subtitle">Agregá nombres y sorteá al instante</p>
+    </header>
+
+    <section class="panel">
+      <div class="form-row">
+        <label for="amigo" class="visually-hidden">Nombre</label>
+        <input id="amigo" type="text" placeholder="Escribe un nombre…" autocomplete="off" />
+        <button type="button" class="btn" onclick="agregarAmigo()">Adicionar</button>
+        <button type="button" class="btn alt" onclick="sortearAmigo()">Sortear Amigo</button>
+      </div>
+
+      <div class="lists">
+        <div class="list-block">
+          <h2>Lista</h2>
+          <ul id="listaAmigos" class="list"></ul>
+        </div>
+
+        <div class="list-block">
+          <h2>Resultado</h2>
+          <ul id="resultado" class="list"></ul>
+        </div>
+      </div>
+    </section>
+
+    <footer class="legal">
+      <small>Programado y Diseñado en Jujuy / ARGENTINA</small>
+    </footer>
+  </main>
+
+  <noscript>Necesitas habilitar JavaScript para usar el sorteo.</noscript>
+</body>
+</html>
+
